@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Color Chooser</title>
+        <style type="text/css">
+            h3 {color: #009; }
+            body {background-color: #ccc;}
+            #colored {width: 5em; height: 5em; border: #000 solid .1em}
+        </style>
+        <script type="text/javascript" src="static/jquery.js" ></script>
+    </head>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#color').bind('change.picker', function() {
+                $('#colored').css("background-color", $(this).val());
+            });
+        });
+    </script>
+    <body>
+        <h3>The Amazing Color chooser!</h3>
+        <span>Enter a color name or number:</span> <input type="text" id="color">
+        <div id="colored">&nbsp;</div>
+    </body>
+</html>
